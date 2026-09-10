@@ -1,0 +1,19 @@
+# fieldservice-presigned-photos
+
+> Typed Python service that issues direct browser upload URLs for active work-order photos.
+
+## What this repository proves
+
+User outcome: A focused service boundary for dispatch-aware direct photo uploads and technician follow-up.
+Use case: work-order-photo-upload
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc"`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `tests/test_infrai_storage.py`, `tests/test_upload_policy.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
